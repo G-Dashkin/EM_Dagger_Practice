@@ -15,6 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         binding.apply {
             btnDagger1.setOnClickListener {
                 startActivity(Intent(this@MainActivity, DaggerActivity1::class.java))
