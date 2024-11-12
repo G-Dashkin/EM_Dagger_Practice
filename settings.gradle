@@ -12,5 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Kotlin_DI1DaggerExample"
+rootProject.name = "EM_Dagger_Practice"
 include ':app'
+include ':core'
+include ':home'

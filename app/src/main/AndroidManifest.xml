@@ -2,36 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-
     <application
-        android:name=".Dagger3.step3.App"
+        android:name=".app.App"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Kotlin_DI1DaggerExample"
+        android:theme="@style/Theme.EM_Dagger_Practice"
         tools:targetApi="31">
-        <activity
-            android:name=".Dagger5.step2.ActivityDagger5Step2"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger5.step1.ActivityDagger5Step1"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger3.DaggerActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger3.step3.presentation.DaggerActivity3Step3"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger3.step2.presentation.DaggerActivity3Step2"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger3.step1.presentation.DaggerActivity3Step1"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -41,24 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Dagger2.step4Add.presentation.ActivityStep4"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger2.step3.presentation.ActivityStep3"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger2.step2.presentation.ActivityStep2"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger2.step1.presentation.ActivityStep1"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger2.DaggerActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".Dagger1.DaggerActivity1"
-            android:exported="false" />
     </application>
 
 </manifest>
