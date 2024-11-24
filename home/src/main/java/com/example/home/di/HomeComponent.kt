@@ -9,9 +9,8 @@ interface HomeComponent {
 
     fun inject(activity: HomeActivity)
 
-    @Component.Builder
-    interface Builder {
-        fun addDeps(deps: HomeDeps): Builder
-        fun build(): HomeComponent
+    @Component.Factory
+    interface Factory {
+        fun create(deps: HomeDeps): HomeComponent
     }
 }

@@ -28,10 +28,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val homeComponent = DaggerHomeComponent
-            .builder()
-            .addDeps(HomeDepsProvider.deps)
-            .build()
+        val homeComponent = DaggerHomeComponent.factory().create(HomeDepsProvider.deps)
         homeComponent.inject(this)
 
         CoroutineScope(EmptyCoroutineContext).launch {
