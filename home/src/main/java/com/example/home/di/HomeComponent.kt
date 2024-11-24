@@ -1,6 +1,6 @@
 package com.example.home.di
 
-import com.example.home.HomeActivity
+import com.example.home.presentation.HomeActivity
 import dagger.Component
 
 @Component(dependencies = [HomeDeps::class])
