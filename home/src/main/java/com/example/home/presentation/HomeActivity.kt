@@ -4,16 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.Observer
-import com.example.core.network.FakeRetrofitNetworkRequestOne
-import com.example.core.network.FakeRetrofitNetworkRequestTwo
+import com.example.core.network.FakeRetrofitNetworkRequest
 import com.example.home.R
 import com.example.home.di.DaggerHomeComponent
+import com.example.home.di.FakeRequestOneQualifier
+import com.example.home.di.FakeRequestTwoQualifier
 import com.example.home.di.HomeDepsProvider
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 import javax.inject.Inject
 import kotlin.coroutines.EmptyCoroutineContext
 
@@ -23,10 +21,12 @@ class HomeActivity : AppCompatActivity() {
     lateinit var homeViewModelFactoryAssisted: HomeViewModelFactoryAssisted
 
     @Inject
-    lateinit var fakeRetrofitNetworkRequestOne: FakeRetrofitNetworkRequestOne
+    @field:FakeRequestOneQualifier
+    lateinit var fakeRetrofitNetworkRequestOne: FakeRetrofitNetworkRequest
 
     @Inject
-    lateinit var fakeRetrofitNetworkRequestTwo: FakeRetrofitNetworkRequestTwo
+    @field:FakeRequestTwoQualifier
+    lateinit var fakeRetrofitNetworkRequestTwo: FakeRetrofitNetworkRequest
 
     private val homeViewModel by viewModels<HomeViewModel> {
         homeViewModelFactoryAssisted.create((0..100).random())
@@ -46,6 +46,5 @@ class HomeActivity : AppCompatActivity() {
             Log.d("MyLog", "id in ViewModel:${homeViewModel.id.value}")
 
         }
-
     }
 }

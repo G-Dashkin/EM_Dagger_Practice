@@ -1,9 +1,7 @@
 package com.example.home.di
 
-import com.example.core.network.FakeRetrofitNetworkRequestOne
-import com.example.core.network.FakeRetrofitNetworkRequestTwo
+import com.example.core.network.FakeRetrofitNetworkRequest
 
 interface HomeDeps {
-    val fakeRetrofitNetworkRequestOne: FakeRetrofitNetworkRequestOne
-    val fakeRetrofitNetworkRequestTwo: FakeRetrofitNetworkRequestTwo
+    var fakeRetrofitNetworkRequest: FakeRetrofitNetworkRequest
 }

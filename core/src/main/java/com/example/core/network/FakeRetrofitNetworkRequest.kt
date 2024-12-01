@@ -1,5 +1,5 @@
 package com.example.core.network
 
-interface FakeRetrofitNetworkRequestOne {
+interface FakeRetrofitNetworkRequest {
     suspend fun makeRequest(): String
 }
